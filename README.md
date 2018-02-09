@@ -4,8 +4,12 @@
 
 `cloudtask` is a distributed task scheduling platform.
 
-in a cluster manner responsible for the distribution of tasks and information collection, there is better scalability and contractility.
+task schedule in a cluster manner responsible for the distribution of tasks and information collection, there is better scalability and contractility.
 ##### More info at [cloudtask.github.io](https://cloudtask.github.io/cloudtask)
+
+### Architecture
+
+![Architecture](./docs/_media/cloudtask.png)
 
 ### Feature   
 * WebUI Manage
