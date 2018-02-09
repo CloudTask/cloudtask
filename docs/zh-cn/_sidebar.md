@@ -1,11 +1,11 @@
 - 快速入门
-- [Cloudtask概念](intro.md)
-- [Cloudtask架构](architecture.md)
-- Cloudtask部署
-  - 依赖环境
-  - cloudtask-web
-  - cloudtask-center
-  - cloudtask-agent
-- 分组管理
-- 任务管理
+  - [Cloudtask概念](intro.md)
+  - [Cloudtask架构](architecture.md)
+  - Cloudtask部署
+    - 依赖环境
+    - cloudtask-web
+    - cloudtask-center
+    - cloudtask-agent
+  - 分组管理
+  - 任务管理
 
