@@ -2,7 +2,7 @@
 
 ![Logo](https://avatars0.githubusercontent.com/u/28881302?s=150&v=4)
 
-### What is Humpback?
+### What is CloudTask?
 `cloudtask` is a distributed task scheduling platform.
 
 task schedule in a cluster manner responsible for the distribution of tasks and information collection, there is better scalability and contractility.
