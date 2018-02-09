@@ -11,12 +11,12 @@ task schedule in a cluster manner responsible for the distribution of tasks and 
 
 ![Architecture](./docs/_media/cloudtask.png)
 
-### Feature   
-* WebUI Manage
+### Features   
+* WebUI Supporting
 * Tasks Timed Schedule
 * Tasks Notify
-* Cluster Tasks Slice
-* Cluster Elasticity Extend
+* Tasks Slice
+* Elasticity Cluster
 * Cluster Failover 
 
 ### Components
