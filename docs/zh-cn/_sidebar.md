@@ -1,5 +1,6 @@
 - 快速入门
-- Cloudtask概念
+- [Cloudtask概念](zh-cn/intro.md)
+- [Cloudtask架构](zh-cn/architecture.md)
 - Cloudtask部署
   - 依赖环境
   - cloudtask-web
