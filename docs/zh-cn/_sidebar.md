@@ -1,11 +1,14 @@
 - 快速入门
   - [Cloudtask概念](zh-cn/intro.md)
   - [Cloudtask架构](zh-cn/architecture.md)
-  - [Cloudtask部署](zh-cn/architecture.md)
-    - [依赖环境](zh-cn/architecture.md)
-    - [cloudtask-web](zh-cn/architecture.md)
-    - [cloudtask-center](zh-cn/architecture.md)
-    - [cloudtask-agent](zh-cn/architecture.md)
-  - [分组管理](zh-cn/architecture.md)
-  - [任务管理](zh-cn/architecture.md)
+  - [Cloudtask部署](zh-cn/deploy.md)
+    - [依赖环境](zh-cn/dependencies.md)
+    - [cloudtask-web](zh-cn/cloudtask-web.md)
+    - [cloudtask-center](zh-cn/cloudtask-center.md)
+    - [cloudtask-agent](zh-cn/cloudtask-agnet.md)
+  - [分组管理](zh-cn/group-manage.md)
+  - [任务管理](zh-cn/task-manage.md)
+- 任务调度器
+  - [任务分配](zh-cn/task-scheduler.md)
+  - [故障迁移](zh-cn/task-failover.md)
 
