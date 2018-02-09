@@ -23,4 +23,4 @@ in a cluster manner responsible for the distribution of tasks and information co
 
 ## License
 
-Apache-2.0
+cloudtask source code is licensed under the [Apache Licence 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).   
