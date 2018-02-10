@@ -8,7 +8,7 @@
     - [cloudtask-agent](zh-cn/cloudtask-agnet.md)
   - [分组管理](zh-cn/group-manage.md)
   - [任务管理](zh-cn/task-manage.md)
-- 任务调度器
+  - [系统管理](zh-cn/task-manage.md)
+- 调度器
   - [任务分配](zh-cn/task-scheduler.md)
   - [故障迁移](zh-cn/task-failover.md)
-
