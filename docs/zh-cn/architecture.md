@@ -1,6 +1,6 @@
 ### Cloudtask架构
 
-![架构图](./_media/cloudtask.png)
+![架构图](_media/cloudtask.png)
 
 #### 系统角色
 
