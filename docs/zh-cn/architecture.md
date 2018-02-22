@@ -22,7 +22,8 @@
    
 - [CloudTask Agent](https://github.com/cloudtask/cloudtask-agent)
    
-   Cloudtask的任务工作节点
+   Cloudtask的工作节点
 
 #### 什么是 `Runtime` ?
 
+   `runtime` 是指一组具有相同运行环境的工作节点集群，每一个工作节点在启动时都需要配置 `runtime` 名称属性，中心服务器在发现节点后会将这些具有相同 `runtime` 名称的节点组成一个 `hash` 环结构，`runtime` 下的所有任务在分配时，会按 `hash` 算法分配到该集群中的工作节点下。
