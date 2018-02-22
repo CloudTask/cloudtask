@@ -1,6 +1,6 @@
 # Cloudtask
 
-> a distributed task scheduling platform. https://cloudtask.github.io
+> a distributed task scheduling platform. 
 
 ## Features
   
