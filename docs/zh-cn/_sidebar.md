@@ -1,4 +1,3 @@
-- [平台概念](zh-cn/intro.md)
 - [平台架构](zh-cn/architecture.md)
 - [安装部署](zh-cn/deploy.md)
 - [系统设置](zh-cn/system-settings.md)
