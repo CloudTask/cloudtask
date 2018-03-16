@@ -22,6 +22,7 @@ task schedule in a cluster manner responsible for the distribution of tasks and 
 
 ### Components
 
+* [CloudTask InitConfig](https://github.com/cloudtask/cloudtask-initconfig)
 * [CloudTask Web](https://github.com/cloudtask/cloudtask-web)
 * [CloudTask Center](https://github.com/cloudtask/cloudtask-center)
 * [CloudTask Agent](https://github.com/cloudtask/cloudtask-agent)
