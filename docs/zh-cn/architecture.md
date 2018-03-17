@@ -6,20 +6,16 @@
 
 - [CloudTask Web](https://github.com/cloudtask/cloudtask-web)   
    
-   
-   Cloudtask平台前端网站系统，通过站点可视化管理任务信息、分组信息、集群信息和系统配置参数；   
-   站点提供更直观的展示功能，比如 `Dashboard`、`Activity`、 `Task`、`Search Job`、`Runtime` 等模块。   
-   通过 `Task` 任务列表可以按分组方式快速查看任务状态和执行的日志信息。
+   Cloudtask的前端网站管理系统，可通过站点可视化管理任务信息、分组信息、集群信息和各项系统配置参数；   
+   站点提供更直观的展示功能，比如 `Dashboard`、`Activity`、 `Task`、`Search Job`、`Runtime` 等功能模块。   
+   通过 `Task` 任务列表可以按分组方式快速查看任务和日志信息。
 
 - [CloudTask Center](https://github.com/cloudtask/cloudtask-center)
    
-   
-   
-   
-   Cloudtask的调度中心服务，通过中心服务计算任务的目标工作节点，负责集群节点发现管理、任务分配等工作。   
-   中心服务按集群对工作节点进行管理，
-
-   
+   Cloudtask的中心调度服务，负责管理集群所有在线工作节点的状态，并为每个 `Runtime` 维护一个任务分配表信息，同时保持   
+   分配表数据的一致性。中心调度服务采用一致性 `hash` 算法来对任务进行动态分配，所有任务只会被分配到它所属 `Runtime`   
+   的工作节点上调度执行。
+      
 - [CloudTask Agent](https://github.com/cloudtask/cloudtask-agent)
    
    Cloudtask的工作节点
