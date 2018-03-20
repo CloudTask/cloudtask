@@ -1,5 +1,5 @@
 # 新建组
-![新建组](_media/add_group.png)
+![新建组](../_media/add_group.png)
 
 > 描述
 
