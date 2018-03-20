@@ -1,6 +1,6 @@
 # 新建运行时
 
-![Add Group](_media/add_group.png)
+![Add Group](../_media/add_group.png)
 
 > 描述
 
