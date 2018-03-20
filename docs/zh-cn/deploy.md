@@ -10,7 +10,7 @@
 
 #### 初始化配置 
 
-- [Cloudtask InitConfig](https://github.com/cloudtask/cloudtask-initconfig)
+> [Cloudtask InitConfig](https://github.com/cloudtask/cloudtask-initconfig)
 
 我们在部署 `Cloudtask` 的各个 `Components` 时，会遇到一些共用的配置参数，若分别为每个服务单独配置会过于繁琐，所以我们需要将配置信息提交到 `zookeeper` 节点中保存，各个服务启动时只需要连接到 `zookeeper` 读取配置节点数据即可。   
 `Cloudtask InitConfig` 工具可以为我们完成这项工作，首先准备好 `ServerConfig.json` 配置文件，填入自己的集群配置信息，然后执行 `cloudtask-initconfig` 来完成初始化工作。
@@ -69,8 +69,101 @@ serverconfig: {"websitehost":"192.168.2.80:8091","centerhost":"192.168.2.80:8985
 initconfig to zookeeper successed!
 ```
 
-#### 部署中心调度服务 
+#### 启动中心调度服务 
 
-- [Cloudtask Center](https://github.com/cloudtask/cloudtask-center) 
+> [Cloudtask Center](https://github.com/cloudtask/cloudtask-center) 
+
+中心调度服务是一个无状态服务，启动后以集群中心角色负责整个平台的任务调度，同时还负责集群中工作节点动态发现管理；中心调度服务若停止，则无法分配新任务或迁移故障节点的现有任务，但并不会影响现有已分配到工作节点上的任务，只是无法收集最新的执行日志和状态。
+
+> 修改配置
+
+  在启动中心调度服务前，首先打开配置文件 `config.yaml` 并定位到 `cluster` 节点，需要先修改配置中的 `hosts` 和 `root` 这两个键值，并保持与初始化配置文件 `ServerConfig.json` 中 `zookeeper` 节点的配置一致即可。
+
+> 程序启动
+
+``` bash
+$ ./cloudtask-center -f ./etc/config.yaml
+```
+
+> docker方式启动
+
+``` bash
+$ docker run -d --net=host --restart=always \
+  -v /opt/app/cloudtask-center/etc/config.yaml:/opt/cloudtask/etc/config.yaml \
+  -v /opt/app/cloudtask-center/logs:/opt/cloudtask/logs \
+  -v /etc/localtime:/etc/localtime \
+  --name=cloudtask-center \
+  cloudtask/cloudtask-center:2.0.0
+```
+> 检查服务
+
+服务启动后，默认服务端口为：`8985`，若能访问则证明部署成功。
+
+``` bash
+$ curl http://192.168.2.80:8985/cloudtask/v2/_ping
+
+Response 200 OK
+{
+	"app": "296721666eddf741016105ebe1bc3fb4",
+	"key": "3a95a871-9dc4-4955-b213-5a040e324309",
+	"node": {
+		"type": 1,
+		"hostname": "host.localdomain",
+		"datacenter": "",
+		"location": "",
+		"os": "linux",
+		"platform": "amd64",
+		"ipaddr": "192.168.2.80",
+		"apiaddr": "http://192.168.2.80:8985",
+		"pid": 1,
+		"singin": false,
+		"timestamp": 0,
+		"alivestamp": 1521268194,
+		"attach": null
+	},
+	"systemconfig": {
+		"version": "v.2.0.0",
+		"pidfile": "./jobserver.pid",
+		"retrystartup": true,
+		"useserverconfig": true,
+		"cluster": {
+			"hosts": "192.168.2.80:2181,192.168.2.81:2181,192.168.2.82:2181",
+			"root": "/cloudtask",
+			"device": "",
+			"runtime": "",
+			"os": "",
+			"platform": "",
+			"pulse": "30s",
+			"timeout": "60s",
+			"threshold": 1
+		},
+		"api": {
+			"hosts": [
+				":8985"
+			],
+			"enablecors": true
+		},
+		"scheduler": {
+			"allocmode": "hash",
+			"allocrecovery": "320s"
+		},
+		"cache": {
+			"lrusize": 1024,
+			"storagedriver": {
+				"mongo": {
+					"database": "cloudtask",
+					"hosts": "192.168.2.80:27017,192.168.2.81:27017,192.168.2.82:27017",
+					"options": [
+						"maxPoolSize=20",
+						"replicaSet=mgoCluster",
+                        "authSource=admin"
+					]
+				}
+			}
+		}
+	}
+}
+```
+
 
 
