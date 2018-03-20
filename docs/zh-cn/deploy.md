@@ -308,3 +308,6 @@ Response 200 OK
     }
 }
 ```
+> 访问站点，进入 `Runtimes` 页，选择 `Runtime` 名称，可以看见服务器在线状态。
+
+![架构图](https://cloudtask.github.io/cloudtask/_media/runtime_servers.png)
