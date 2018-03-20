@@ -1,6 +1,6 @@
 # 运行时列表
 
-![Runtime Manage](_media/manage_runtime.png)
+![Runtime Manage](../_media/manage_runtime.png)
 
 > 描述
 
