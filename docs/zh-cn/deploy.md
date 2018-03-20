@@ -8,12 +8,12 @@
 
 - [Mongodb cluster 3.0.12+](https://www.mongodb.com)  
 
-#### 初始化配置 [Cloudtask InitConfig](https://github.com/cloudtask/cloudtask-initconfig) 
+#### 初始化配置 
+
+- [Cloudtask InitConfig](https://github.com/cloudtask/cloudtask-initconfig)
 
 我们在部署 `Cloudtask` 的各个 `Components` 时，会遇到一些共用的配置参数，若分别为每个服务单独配置会过于繁琐，所以我们需要将配置信息提交到 `zookeeper` 节点中保存，各个服务启动时只需要连接到 `zookeeper` 读取配置节点数据即可。   
 `Cloudtask InitConfig` 工具可以为我们完成这项工作，首先准备好 `ServerConfig.json` 配置文件，填入自己的集群配置信息，然后执行 `cloudtask-initconfig` 来完成初始化工作。
-
-> 更多请参见 [Cloudtask InitConfig](https://github.com/cloudtask/cloudtask-initconfig) 
 
 > ServerConfig.json
 
@@ -68,6 +68,8 @@ serverconfig: {"websitehost":"192.168.2.80:8091","centerhost":"192.168.2.80:8985
 initconfig to zookeeper successed!
 ```
 
-#### 部署中心调度服务 [Cloudtask Center](https://github.com/cloudtask/cloudtask-center) 
+#### 部署中心调度服务 
+
+- [Cloudtask Center](https://github.com/cloudtask/cloudtask-center) 
 
 
