@@ -1,6 +1,6 @@
 # 新建用户
 
-![新建用户](_media/add_user.png)
+![新建用户](../_media/add_user.png)
 
 > 描述
 
