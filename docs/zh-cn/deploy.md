@@ -1,4 +1,4 @@
-### Cloudtask安装部署
+### Cloudtask部署
 
 #### 环境依赖
 

@@ -1,6 +1,6 @@
 - [平台概述](zh-cn/README.md)
 - [平台架构](zh-cn/architecture.md)
-- [安装部署](zh-cn/deploy.md)
+- [平台部署](zh-cn/deploy.md)
 - 运行时管理
   - [运行时列表](zh-cn/runtime-manage.md)
   - [新建运行时](zh-cn/add-runtime.md)
