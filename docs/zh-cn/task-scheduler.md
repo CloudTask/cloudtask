@@ -7,7 +7,7 @@
 - `Platform`：服务器平台
 - `Status`：服务器状态，有`Healthy`和`Disconnected`两种
 
-![Server Info](../_media/server_infi.png)
+![Server Info](../_media/server_info.png)
 
 点击页面顶部的`i`按钮显示当前runtime下的任务分配情况
 
@@ -16,4 +16,4 @@
 - `Job ID`：任务id
 - `Version`：版本
 
-![Assign Task](../_media/assign_task.png)
+![Assign Task](../_media/assign_table.png)
