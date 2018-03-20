@@ -1,6 +1,6 @@
 - [平台概述](zh-cn/README.md)
 - [平台架构](zh-cn/architecture.md)
-- [安装部署](zh-cn/deploy.md)
+- [平台部署](zh-cn/deploy.md)
 
 - 任务管理
     - [任务列表](zh-cn/task-list.md)
@@ -13,7 +13,7 @@
   - [runtime列表](zh-cn/runtime-manage.md)
   - [新建Runtime](zh-cn/add-runtime.md)
   - [编辑Runtime](zh-cn/edit-runtime.md)
-  
+
 - 分组管理
   - [分组列表](zh-cn/group-manage.md)
   - [新建组](zh-cn/add-group.md)
