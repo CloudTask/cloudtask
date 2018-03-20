@@ -170,7 +170,7 @@ Response 200 OK
 
 > [Cloudtask Web](https://github.com/cloudtask/cloudtask-web) 
 
-先修改站点配置文件：`src/server/common/config.js`，将 `zookeeperConfig` 变量修改为之前初始化配置文件 `ServerConfig.json` 中 `zookeeper` 节点的 'hosts' 配置即可，若是 `docker` 容器启动，可以创建一个 `config.js` 文件再映射到容器中。
+先修改站点配置文件：`src/server/common/config.js`，将 `zookeeperConfig` 变量修改为初始化配置文件 `ServerConfig.json` 中 `zookeeper` 节点的 'hosts' 配置即可，若是以 `docker` 容器方式启动，可以新创建一个 `config.js` 文件再映射到容器中。
 
 ``` javascript
 const path = require('path');
