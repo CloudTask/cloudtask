@@ -208,13 +208,103 @@ $ docker run -d --net=host --restart=always \
 ```
 > 访问网站
 
-启动成功后访问：http://localhost:8091   
-默认管理账户：admin   
-登录密码：123456   
+启动成功后访问：http://localhost:8091，默认管理账户：admin，登录密码：123456   
 
 ![Cloudtask-Web](https://raw.githubusercontent.com/CloudTask/cloudtask-web/master/screenshots/login.png)
 
 #### 启动工作节点
 
-工作节点启动后，需要到站点 `Runtime` 管理中
+一个工作节点只能加入到一个 `Runtime` 中，当多个相同IP地址的工作节点加入到一个相同的 `Runtime` 中时，只有最先加入的工作节点才会被加入集群调度。   
+工作节点启动成功后，需要在站点 `Runtime` 管理中创建这个工作节点加入的 `Runtime` 信息，若已存在，则在 `Runtime` 中的 `Servers` 属性中添加这个工作节点的IP地址或 ServerName 即可，若在站点 `Runtime` 中不添加已经启动的工作节点信息，节点就不会被加入集群。
 
+> 修改配置
+
+  在启动工作节点前，首先打开配置文件 `config.yaml` 并定位到 `cluster` 节点，需要先修改配置中的 `hosts` 和 `root` 这两个键值，并保持与初始化配置文件 `ServerConfig.json` 中 `zookeeper` 节点的配置一致即可。   
+  同样在 `cluster` 节点中，最重要的还需要修改 `runtime` 属性，设置我们想加入的目标 `Runtime` 名称，这个名称可能在站点 `Runtime` 管理中已经添加了，若未添加可以待工作节点启动后再去创建。
+
+> 程序启动
+
+``` bash
+$ ./cloudtask-agent -f ./etc/config.yaml
+```
+
+> docker方式启动
+
+``` bash
+$ docker run -d --net=host --restart=always \
+  -v /opt/app/cloudtask-agent/etc/config.yaml:/opt/cloudtask/etc/config.yaml \
+  -v /opt/app/cloudtask-agent/logs:/opt/cloudtask/logs \
+  -v /opt/app/cloudtask-agent/cache:/opt/cloudtask/cache \
+  -v /etc/localtime:/etc/localtime \
+  --name=cloudtask-agnet \
+  cloudtask/cloudtask-agnet:2.0.0
+```
+
+> 检查服务
+
+服务启动后，默认端口为：`8600`，若能访问则证明部署成功。
+
+``` bash
+$ curl http://192.168.2.80:8600/cloudtask/v2/_ping
+
+Response 200 OK
+{
+    "app": "7969c05a25a3cdfd39645bba2d213173",
+    "key": "509794cc-3539-4f58-a4d3-cc02a4f4848f",
+    "node": {
+        "type": 2,
+        "hostname": "host.localdomain",
+        "datacenter": "",
+        "location": "myCluster",
+        "os": "linux",
+        "platform": "amd64",
+        "ipaddr": "192.168.2.80",
+        "apiaddr": "http://192.168.2.80:8600",
+        "pid": 1,
+        "singin": true,
+        "timestamp": 1521546613,
+        "alivestamp": 1521276530,
+        "attach": "eyJqb2JtYXhjb3VudCI6MjU1fQo="
+    },
+    "systemconfig": {
+        "version": "v.2.0.0",
+        "pidfile": "./jobworker.pid",
+        "retrystartup": true,
+        "useserverconfig": true,
+        "centerhost": "http://192.168.2.80:8985",
+        "websitehost": "http://192.168.2.80:8091",
+        "cluster": {
+            "hosts": "192.168.2.80:2181,192.168.2.81:2181,192.168.2.82:2181",
+            "root": "/cloudtask",
+            "device": "",
+            "runtime": "myCluster",
+            "os": "",
+            "platform": "",
+            "pulse": "8s",
+            "threshold": 1
+        },
+        "api": {
+            "hosts": [
+                ":8600"
+            ],
+            "enablecors": true
+        },
+        "cache": {
+            "maxjobs": 255,
+            "savedirectory": "./cache",
+            "autoclean": true,
+            "cleaninterval": "30m",
+            "pullrecovery": "300s"
+        },
+        "logger": {
+            "logfile": "./logs/jobworker.log",
+            "loglevel": "info",
+            "logsize": 20971520
+        }
+    },
+    "cache": {
+        "allocversion": 48,
+        "jobstotal": 3
+    }
+}
+```
