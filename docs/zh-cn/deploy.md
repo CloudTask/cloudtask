@@ -51,11 +51,13 @@
 ```
 
 > 开始执行
+
 ``` bash
 $ ./cloudtask-initconfig -f ./ServerConfig.json
 ```
 
 > 成功输出
+
 ``` bash
 2018/03/16 15:07:29 Connected to 192.168.2.80:2181
 2018/03/16 15:07:29 Authenticated: id=99692315792834560, timeout=15000
