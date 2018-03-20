@@ -21,6 +21,8 @@
 
 - websitehost: 表示 `cloudtask-web` 的站点地址和端口，默认端口为：`8091`.
 - centerhost: 表示 `cloudtask-center` 中心调度服务的地址和端口，默认端口为：`8985`.
+- zookeeper: 提前配置的 `zookeeper` 集群信息，`root` 默认为 /cloudtask 节点.
+- storagedriver: 默认支持 `mongodb` 存储驱动，配置好 `mongodb` 的各项参数，若没有账户密码，则不需要 `auth` 键.
 
 ``` json
 {
@@ -211,4 +213,8 @@ $ docker run -d --net=host --restart=always \
 登录密码：123456   
 
 ![Cloudtask-Web](https://raw.githubusercontent.com/CloudTask/cloudtask-web/master/screenshots/login.png)
+
+#### 启动工作节点
+
+工作节点启动后，需要到站点 `Runtime` 管理中
 
