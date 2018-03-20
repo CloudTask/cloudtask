@@ -2,7 +2,22 @@
 - [Architecture](architecture.md)
 - [Install & Deploy](deploy.md)
 - [System Settings](system-settings.md)
-- [Groups Manage](groups-manage.md)
+
+- Runtime Management
+  - [Runtime List](runtime-manage.md)
+  - [Create Runtime](create-runtime.md)
+  - [Edit Runtime](edit-runtime.md)
+  
+- Group Management
+  - [Group List](group-manage.md)
+  - [Create Group](create-group.md)
+  - [Edit Group](edit-group.md)
+  
+- User Management
+  - [User List](user-manage.md)
+  - [Add User](add-user.md)
+  - [Edit User](edit-user.md)
+  
 - [Tasks Manage](tasks-manage.md)
 - [Tasks Scheduler](tasks-scheduler.md)
 - [Failover](failover.md)
