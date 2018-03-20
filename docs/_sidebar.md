@@ -4,6 +4,13 @@
 
 - [System Settings](system-settings.md)
 
+- Task Management
+  - [Runtime List](task-list.md)
+  - [Create Runtime](add-task.md)
+  - [Edit Runtime](edit-task.md)
+  
+- [Tasks Scheduler](tasks-scheduler.md)
+
 - Runtime Management
   - [Runtime List](runtime-manage.md)
   - [Create Runtime](add-runtime.md)
@@ -19,11 +26,6 @@
   - [Add User](add-user.md)
   - [Edit User](edit-user.md)
   
-- Task Management
-  - [Runtime List](task-list.md)
-  - [Create Runtime](add-task.md)
-  - [Edit Runtime](edit-task.md)
   
-- [Tasks Scheduler](tasks-scheduler.md)
 - [Failover](failover.md)
 - [FAQ](faq.md)

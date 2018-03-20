@@ -1,12 +1,13 @@
-# runtime列表
+# Task列表
 
-![Task Manage](../_media/manage_task.png)
+![Task Manage](../_media/task_list.png)
 
 > 列表头部
 
 - `Status`：有`running`、`disabled`、`idle`、`reallocating`、`failed`五种状态，分别表示`正在执行`、`禁用`、`等待执行`、`等待分配`、`执行失败`，可以通过选择status筛选对应状态的任务
 - `Add New Job`：点击页面上方`Add New Job`按钮来新建任务
 - `Batch Update File`：批量更新当前组下的任务文件
+
 ![Batch Update File](../_media/batch_update.png)
 
 > 列表体
