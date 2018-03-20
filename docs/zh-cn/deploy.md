@@ -308,6 +308,12 @@ Response 200 OK
     }
 }
 ```
-> 访问站点，进入 `Runtimes` 页，选择 `Runtime` 名称，可以看见服务器在线状态。
+> 访问站点，创建 `Runtime`，检查节点状态
 
+示例：如下3个工作节点分别在配置中设置了 `runtime` 为：`myCluster`，以管理员身份登录站点后，进入 `Manage` -> `Runtimes` -> `Add Runtime`，添加工作节点服务器后，可以立即看到工作节点已经正常加入在线。
+
+创建 `myCluster`   
+![架构图](https://cloudtask.github.io/cloudtask/_media/add_runtime_servers.png)
+
+检查 `myCluster`   
 ![架构图](https://cloudtask.github.io/cloudtask/_media/runtime_servers.png)
