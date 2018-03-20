@@ -51,19 +51,18 @@
 ```
 
 > 开始执行
-```bash
+``` bash
 $ ./cloudtask-initconfig -f ./ServerConfig.json
 ```
 
 > 成功输出
-```bash
+``` bash
 2018/03/16 15:07:29 Connected to 192.168.2.80:2181
 2018/03/16 15:07:29 Authenticated: id=99692315792834560, timeout=15000
 2018/03/16 15:07:29 Re-submitting `0` credentials after reconnect
 zookeeper path: /cloudtask/ServerConfig
 2018/03/16 15:07:30 Recv loop terminated: err=EOF
 serverconfig: {"websitehost":"192.168.2.80:8091","centerhost":"192.168.2.80:8985","storagedriver":{"mongo":{"auth":{"password":"ds4dev","user":"datastoreAdmin"},"database":"cloudtask","hosts":"192.168.2.80:27017,192.168.2.81:27017,192.168.2.82:27017","options":["maxPoolSize=20","replicaSet=mgoCluster","authSource=admin"]}}}
-
 2018/03/16 15:07:30 Send loop terminated: err=<nil>
 initconfig to zookeeper successed!
 ```
