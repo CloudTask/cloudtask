@@ -77,7 +77,8 @@ initconfig to zookeeper successed!
 
 > 修改配置
 
-  在启动中心调度服务前，首先打开配置文件 `config.yaml` 并定位到 `cluster` 节点，需要先修改配置中的 `hosts` 和 `root` 这两个键值，并保持与初始化配置文件 `ServerConfig.json` 中 `zookeeper` 节点的配置一致即可。
+  在启动中心调度服务前，首先打开配置文件 `config.yaml` 并定位到 `cluster` 节点，需要先修改配置中的 `hosts` 和 `root` 这两个键值，并保持与初始化配置文件 `ServerConfig.json` 中 `zookeeper` 节点的配置一致即可。若想更换启动端口，可修改 `config.yaml` 中的 `api` 节点。
+
 
 > 程序启动
 
@@ -165,5 +166,49 @@ Response 200 OK
 }
 ```
 
+#### 启动站点服务
 
+> [Cloudtask Web](https://github.com/cloudtask/cloudtask-web) 
+
+先修改站点配置文件：`src/server/common/config.js`，将 `zookeeperConfig` 变量修改为之前初始化配置文件 `ServerConfig.json` 中 `zookeeper` 节点的 'hosts' 配置即可，若是 `docker` 容器启动，可以创建一个 `config.js` 文件再映射到容器中。
+
+``` javascript
+const path = require('path');
+
+var listenPort = 8091;
+var uploadFolder = path.join(__dirname, '../uploads');
+var zookeeperConfig = '192.168.2.80:2181,192.168.2.81:2181,192.168.2.82:2181';
+module.exports = {
+    listenPort,
+    uploadFolder,
+    zookeeperConfig
+}
+```
+
+> node启动
+
+``` bash
+$ git clone https://github.com/cloudTask/cloudtask-web.git
+$ cd cloudtask-web
+$ npm install
+$ npm start
+```
+
+> docker方式启动
+
+``` bash
+$ docker run -d --net=host --restart=always \
+  -v /opt/app/cloudtask-web/config.js:/cloudtask-web/common/config.js \
+  -v /opt/app/cloudtask-web/uploads:/cloudtask-web/uploads \
+  -v /etc/localtime:/etc/localtime \
+  --name=cloudtask-web \
+  cloudtask\cloudtask-web:2.0.0 
+```
+> 访问网站
+
+启动成功后访问：http://localhost:8091   
+默认管理账户：admin   
+登录密码：123456   
+
+![Cloudtask-Web](https://raw.githubusercontent.com/CloudTask/cloudtask-web/master/screenshots/login.png)
 
