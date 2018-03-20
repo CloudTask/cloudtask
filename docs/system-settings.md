@@ -1,6 +1,6 @@
 # System Config
 
-![System Config](_media/system_config.png)
+![System Config](_media/system_setting.png)
 
 > Description
 
