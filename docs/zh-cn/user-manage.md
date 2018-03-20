@@ -2,7 +2,7 @@
 
 *只有 **管理员** 能看到用户的侧边栏选项*
 
-![管理用户](_media/manage_user.png)
+![管理用户](../_media/manage_user.png)
 
 > 描述
 

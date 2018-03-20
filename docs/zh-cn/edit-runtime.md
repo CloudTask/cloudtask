@@ -1,6 +1,6 @@
 # 编辑运行时
 
-![Edit Runtime](_media/edit_runtime.png)
+![Edit Runtime](../_media/edit_runtime.png)
 
 > 描述
 

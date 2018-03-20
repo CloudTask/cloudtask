@@ -1,6 +1,6 @@
 # 系统配置
 
-![系统配置](_media/system_config.png)
+![系统配置](../_media/system_config.png)
 
 > 描述
 

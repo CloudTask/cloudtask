@@ -1,6 +1,6 @@
 # 组列表
 
-![管理组](_media/manage_group.png)
+![管理组](../_media/manage_group.png)
 
 > 描述
 
