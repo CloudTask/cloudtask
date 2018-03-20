@@ -5,12 +5,12 @@
 
 - Runtime Management
   - [Runtime List](runtime-manage.md)
-  - [Create Runtime](create-runtime.md)
+  - [Create Runtime](add-runtime.md)
   - [Edit Runtime](edit-runtime.md)
   
 - Group Management
   - [Group List](group-manage.md)
-  - [Create Group](create-group.md)
+  - [Create Group](add-group.md)
   - [Edit Group](edit-group.md)
   
 - User Management
