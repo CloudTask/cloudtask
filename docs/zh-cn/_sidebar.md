@@ -1,3 +1,4 @@
+- [平台概述](zh-cn/README.md)
 - [平台架构](zh-cn/architecture.md)
 - [安装部署](zh-cn/deploy.md)
 - [分组管理](zh-cn/groups-manage.md)
