@@ -1,6 +1,5 @@
 - [平台架构](zh-cn/architecture.md)
 - [安装部署](zh-cn/deploy.md)
-- [系统设置](zh-cn/system-settings.md)
 - [分组管理](zh-cn/groups-manage.md)
 - [任务管理](zh-cn/tasks-manage.md)
 - [任务调度](zh-cn/tasks-scheduler.md)

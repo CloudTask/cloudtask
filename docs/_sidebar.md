@@ -1,7 +1,6 @@
 - [Introduction](intro.md)
 - [Architecture](architecture.md)
 - [Install & Deploy](deploy.md)
-- [System Settings](system-settings.md)
 - [Groups Manage](groups-manage.md)
 - [Tasks Manage](tasks-manage.md)
 - [Tasks Scheduler](tasks-scheduler.md)
