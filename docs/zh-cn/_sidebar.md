@@ -5,7 +5,7 @@
     - [任务列表](zh-cn/task-list.md)
     - [新建任务](zh-cn/add-task.md)
     - [编辑任务](zh-cn/edit-task.md)
-- [任务调度](zh-cn/task-scheduler.md)
+- [任务状态](zh-cn/task-status.md)
 - Runtime管理
   - [runtime列表](zh-cn/runtime-manage.md)
   - [新建Runtime](zh-cn/add-runtime.md)
