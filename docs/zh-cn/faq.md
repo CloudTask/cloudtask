@@ -43,6 +43,44 @@ cluster:
 ``` yaml
     device: 192.168.2.80 #或 eth0 
 ```
+
+修改配置后重新启动，可以访问中心调度服务器 API 查看某个 `Runtime` 的在线工作节点服务状态。`servers` 中的数据为在线服务。
+
+``` bash
+$ curl http://192.168.2.80:8985/cloudtask/v2/runtimes/myCluster/servers
+
+Response 200 OK
+{
+    "content": "request successed.",
+    "data": {
+        "servers": [
+            {
+                "key": "509794cc-3539-4f58-a4d3-cc02a4f4848f",
+                "name": "host.localdomain",
+                "ipaddr": "192.168.2.80",
+                "apiaddr": "http://192.168.2.80:8600",
+                "os": "linux",
+                "platform": "amd64",
+                "status": 1,
+                "alivestamp": 1521276530
+            },
+            {
+                "key": "517ae088-779c-4520-b23f-e5f0c341081d",
+                "name": "localhost.localdomain",
+                "ipaddr": "192.168.2.81",
+                "apiaddr": "http://192.168.2.81:8600",
+                "os": "linux",
+                "platform": "amd64",
+                "status": 1,
+                "alivestamp": 1521277792
+            }
+        ]
+    }
+}
+```
+
+
+
 > 为什么我部署的所有任务状态全是 `reallocating` 状态？
 
 当一个 `runtime` 下大部分任务出现 `reallocating` 状态，一般是因为服务发现工作节点服务器，不能再分配任务到工作服务节点上了，需要检查工作节点服务是否已经全部宕机或重启造成。   
