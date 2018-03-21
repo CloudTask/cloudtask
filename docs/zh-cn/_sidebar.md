@@ -18,5 +18,6 @@
   - [用户列表](zh-cn/user-manage.md)
   - [新建用户](zh-cn/add-user.md)
   - [编辑用户](zh-cn/edit-user.md)
+- [任务调度](zh-cn/scheduler.md) 
 - [故障迁移](zh-cn/failover.md)
 - [常见问题](zh-cn/faq.md)
