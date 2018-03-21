@@ -65,7 +65,7 @@ api:
     enablecors: true
 ```
 
-> 已 `docker` 方式启动的工作节点无法执行我的任务？
+> 以 `docker` 容器方式部署的工作节点服务无法执行我的任务？
 
 该问题一般为容器内缺少运行环境导致，我们官方默认制作的镜像：`docker.io/cloudtask/cloudtask-agent:2.0.0` 是基于 `centos 7` 基础镜像制作的，若要运行 `java`、 `python` 等需要运行时的任务，请自己制作具备这些运行时的工作节点镜像后再部署, 在 `cloudtask-agent` 项目中有 `Dockerfile` 参考，可以修改基础镜像依赖，原则上我们要保证 `Runtime` 下的工作节点服务器运行环境一致，这样才能保证任务能正常调度执行。
 
