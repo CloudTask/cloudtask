@@ -1,4 +1,4 @@
-- [Introduction](intro.md)
+- [Introduction](README.md)
 - [Architecture](architecture.md)
 - [Install & Deploy](deploy.md)
 
@@ -26,6 +26,6 @@
   - [Add User](add-user.md)
   - [Edit User](edit-user.md)
   
-  
+- [Scheduler](scheduler.md)  
 - [Failover](failover.md)
 - [FAQ](faq.md)
