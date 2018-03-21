@@ -236,8 +236,8 @@ $ docker run -d --net=host --restart=always \
   -v /opt/app/cloudtask-agent/logs:/opt/cloudtask/logs \
   -v /opt/app/cloudtask-agent/cache:/opt/cloudtask/cache \
   -v /etc/localtime:/etc/localtime \
-  --name=cloudtask-agnet \
-  cloudtask/cloudtask-agnet:2.0.0
+  --name=cloudtask-agent \
+  cloudtask/cloudtask-agent:2.0.0
 ```
 
 > 检查服务
