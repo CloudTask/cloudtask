@@ -4,6 +4,6 @@
 
 > Description
 
-- Runtime information is consistent with [`adding runtime`](add_runtime.md)
+- Runtime information is consistent with [`adding runtime`](add-runtime.md)
 
 PS: When deleting a `Server`, the current runtime will be allocated in the remaining `Server`
