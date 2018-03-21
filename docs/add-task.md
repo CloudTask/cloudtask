@@ -9,7 +9,8 @@ Fill in the form information as shown in the page form
 - `Target Server`: The server that runs the Job supports drop-down selection and manual input. If it is empty, it means that the server will be randomly allocated under the `Runtime`.
 - `Command`: Job's run command (eg node index.js)
 - `File name`: Show the current execution program name of the Job, click the delete button behind, you can delete the current Job execution program
-- `Update file`: Optional. Select Job's execution program (must be an executable program and compressed in .tar.gz format), or select the history execution program of Job in `Backup List`. After selecting, click the Download button at the back to download the execution program.
+- `Update Job File`: Optional. Select Job's execution program (must be an executable program and compressed in .tar.gz format), or select the history execution program of Job in `Backup List`. After selecting, click the Download button at the back to download the execution program.
+PS: The default file upload path is ./uploads/default
 - `Enable Timeout(s)`: Optional. Set the expiration time of the job in seconds (s). The expiration time must be in the range from `1s` to `172800s` (2 days)
 - `Environment Variables`：Environment variables
 - `Send Notification`: Optional. Used for email notification when the job executes `success` or `failure`
