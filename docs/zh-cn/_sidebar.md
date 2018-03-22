@@ -1,6 +1,7 @@
 - [平台概述](zh-cn/README.md)
 - [平台架构](zh-cn/architecture.md)
 - [平台部署](zh-cn/deploy.md)
+- [系统配置](zh-cn/system-setting.md) 
 - 任务管理
     - [任务列表](zh-cn/task-list.md)
     - [新建任务](zh-cn/add-task.md)
