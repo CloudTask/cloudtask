@@ -1,4 +1,4 @@
-# 一个轻量级分布式任务调度平台CloudTask - Quick Start
+# 一个轻量级分布式任务调度平台CloudTask
 
 ## 什么是Cloudtask?
 
@@ -32,22 +32,6 @@ Dashboard
 任务列表
 
 ![Runtime集群](https://cloudtask.github.io/cloudtask/_media/tasks_list.png)
-
-Activitys
-
-![Runtime集群](https://cloudtask.github.io/cloudtask/_media/activity.png)
-
-任务查询
-
-![Runtime集群](https://cloudtask.github.io/cloudtask/_media/search.png)
-
-用户管理
-
-![Runtime集群](https://cloudtask.github.io/cloudtask/_media/user_manage.png)
-
-集群管理
-
-![Runtime集群](https://cloudtask.github.io/cloudtask/_media/runtime_manage.png)
 
 ### 项目地址
 
