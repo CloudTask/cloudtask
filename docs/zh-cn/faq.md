@@ -44,7 +44,7 @@ cluster:
     device: 192.168.2.80 #或 eth0 
 ```
 
-修改配置后重新启动，可以访问中心调度服务器 API 查看某个 `Runtime` 的在线工作节点服务状态。`servers` 中的数据为在线服务。
+修改配置后重新启动，可以访问中心调度服务器 API 查看某个 `Runtime` 的在线工作节点服务状态。`servers` 中的数据为在线服务节点。
 
 ``` bash
 $ curl http://192.168.2.80:8985/cloudtask/v2/runtimes/myCluster/servers
@@ -83,7 +83,7 @@ Response 200 OK
 
 > 为什么我部署的所有任务状态全是 `reallocating` 状态？
 
-当一个 `runtime` 下大部分任务出现 `reallocating` 状态，一般是因为服务发现工作节点服务器，不能再分配任务到工作服务节点上了，需要检查工作节点服务是否已经全部宕机或重启造成。   
+当一个 `runtime` 下大部分任务出现 `reallocating` 状态，一般是因为中心调度服务不能再分配任务到工作节点上了，需要检查工作节点服务是否已经全部宕机或重启造成。   
 
 若部分任务出现 `reallocating` 状态，我们需要检查任务的 `Target Server` 设置，检查设置的服务器是否已经不在线或宕机了，启动后即可再分分配任务。
 
