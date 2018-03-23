@@ -11,7 +11,7 @@
 The `Cloudtask` backend is a stateless service. It uses the `Zookeeper` to realize the discovery and coordination between the nodes of the cluster, and the nodes register to the registration center in a heartbeat manner, The center server manages all the clusters in a unified manner, tasks scheduling is distributed in clusters and has good scalability, the tasks allocation information is divided into clusters and the allocation data is stored in the `Zookeeper` node to maintain the consistency of the allocated data.
 
 ##### More info at [cloudtask.github.io](https://cloudtask.github.io/cloudtask)
-##### Demo at [http://104.225.159.143:8091](http://104.225.159.143:8091)
+
 ### Architecture
 
 ![Architecture](./docs/_media/cloudtask.png)
