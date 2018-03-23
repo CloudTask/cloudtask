@@ -11,9 +11,6 @@
 
 `Cloudtask` 后端为无状态服务，通过 `Zookeeper` 实现集群各节点间的发现与协调，节点以心跳方式注册到注册中心，中心服务器统一管理着所有集群，任务调度以集群方式进行分配，具有良好的可扩展性，任务分配信息按集群划分并将分配数据存储到 `Zookeeper` 节点，保持分配数据的一致性。
 
-#### 项目地址 [https://github.com/cloudtask](https://github.com/cloudtask)
-#### 更多文档 [https://cloudtask.github.io/cloudtask](https://cloudtask.github.io/cloudtask)
-
 ## 主要特性   
 
 - 分布式：采用 `Zookeeper` 实现注册中心，节点与任务分布；
@@ -35,6 +32,15 @@
 * [CloudTask Center](https://github.com/cloudtask/cloudtask-center)
 * [CloudTask Agent](https://github.com/cloudtask/cloudtask-agent)
 
+### 项目介绍 
+
+* 项目地址：[https://github.com/cloudtask](https://github.com/cloudtask)
+
+* 项目文档：[https://cloudtask.github.io/cloudtask](https://cloudtask.github.io/cloudtask)
+
+* 在线示例: [http://104.225.159.143:8091](http://104.225.159.143:8091)   
+
+  登录账户：guest 登录密码：123456
 ## 功能预览
 
 前端登录
@@ -54,4 +60,4 @@ Dashboard
 ![Runtime集群](https://cloudtask.github.io/cloudtask/_media/tasks_list.png)
 
 ## License
-Cloudtask 所有开源代码基于 Apache Licence 2.0 协议构建.
+Cloudtask 所有开源代码基于 Apache Licence 2.0
