@@ -12,6 +12,7 @@
 * Cluster Failover
 
 
+[Gitee](https://gitee.com/cloudtask/cloudtask)
 [GitHub](https://github.com/cloudtask/cloudtask)
 [Get Started](#Cloudtask)
 

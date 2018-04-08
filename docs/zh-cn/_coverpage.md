@@ -11,7 +11,7 @@
 * 集群弹性伸缩
 * 集群故障迁移
 
-
+[Gitee](https://gitee.com/cloudtask/cloudtask)
 [GitHub](https://github.com/cloudtask/cloudtask)
 [Get Started](#Cloudtask)
 
