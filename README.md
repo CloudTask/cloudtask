@@ -4,7 +4,7 @@
 
 ### What is CloudTask?
 
-`Cloudtask` is a lightweight distributed task scheduling management platform that is small and easy to used. we can upload, pause, start tasks, clone a task, modify the task's execution command, view the task's schedule info status and execution log, developers can write any task program in the programming language they are most familiar with. It can be a console program or a shell script and uploaded to the platform.
+`Cloudtask` is a lightweight distributed task scheduling management platform that is small and easy to use. we can upload, pause, start tasks, clone a task, modify the task's execution command, view the task's schedule info status and execution log, developers can write any task program in the programming language they are most familiar with. It can be a console program or a shell script and uploaded to the platform.
 
 ### CloudTask Design
 
